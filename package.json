@@ -1,0 +1,31 @@
+{
+  "name": "australia-address-parser",
+  "version": "1.0.0",
+  "description": "Australia Street Address Parser",
+  "main": "parser.js",
+  "scripts": {
+    "test": "node test",
+    "build": "browserify parser.js --standalone australiaAddressParser | uglifyjs -mc > australiaAddressParser.min.js"
+  },
+  "author": "Gordon Lam (https://github.com/gordonlkc)",
+  "license": "ISC",
+  "dependencies": {
+    "xregexp": "^3.1.1"
+  },
+  "devDependencies": {
+    "uglifyjs": "^2.4.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordonlkc/australia-address-parser.git"
+  },
+  "keywords": [
+    "australia",
+    "address",
+    "parser"
+  ],
+  "bugs": {
+    "url": "https://github.com/gordonlkc/australia-address-parser/issues"
+  },
+  "homepage": "https://github.com/gordonlkc/australia-address-parser#readme"
+}
