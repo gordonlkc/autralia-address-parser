@@ -314,6 +314,10 @@
         }
     }
 
+    if (typeof parsed.streetType !== "undefined") parsed.streetType = shortenStreetType(parsed.streetType);
+    if (typeof parsed.streetType1 !== "undefined") parsed.streetType1 = shortenStreetType(parsed.streetType1);
+    if (typeof parsed.streetType2 !== "undefined") parsed.streetType2 = shortenStreetType(parsed.streetType2);
+
     // Handle Intersection
     if (typeof parsed.streetName1 !== "undefined" || typeof parsed.streetName2 !== "undefined" || typeof parsed.streetType1 !== "undefined" || typeof parsed.streetType2 !== "undefined" ){
 
@@ -338,7 +342,7 @@
     }
 
     Object.keys(parsed).forEach(function(key){
-      parsed[key] = parsed[key].trim();
+      if (typeof parsed[key] !== "undefined") parsed[key] = parsed[key].trim();
     })
 
     return parsed;
@@ -396,6 +400,14 @@
 
     //  Remove brankets and contents in address
     return address.replace(/\s*\([^)]*\)/g, "").replace(/\s-\s/g,"-");
+  }
+
+  function shortenStreetType(streetType){
+    // Street_Type.map((s)=>{
+    //   console.log(s);
+    // })
+    if (typeof Street_Type[streetType] !== "undefined") return Street_Type[streetType];
+    return streetType;
   }
 
   function titleCase(str) {
