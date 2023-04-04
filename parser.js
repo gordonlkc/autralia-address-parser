@@ -113,7 +113,7 @@
     "Tasmania": "TAS",
     "Victoria": "VIC",
     "Western Australia": "WA",
-    "Australian Capital Territory": "ACT",
+    "Australian Capital Territory": "ACT"
   };
 
   var Direction_Code;
