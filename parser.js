@@ -106,13 +106,14 @@
   };
 
   var State_Code = {
-    "New South Wales" : "NSW",
-    "Northern Territory	" : "NT",
-    "Queensland" : "QLD",
-    "South Australia" : "SA",
-    "Tasmania" : "TAS",
-    "Victoria" : "VIC",
-    "Western Australia" : "WA"
+    "New South Wales": "NSW",
+    "Northern Territory	": "NT",
+    "Queensland": "QLD",
+    "South Australia": "SA",
+    "Tasmania": "TAS",
+    "Victoria": "VIC",
+    "Western Australia": "WA",
+    "Australian Capital Territory": "ACT",
   };
 
   var Direction_Code;
